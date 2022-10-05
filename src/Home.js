@@ -10,11 +10,10 @@ function Home() {
 
     const [todo, setTodo] = useState('');
     const status = true;
-    const [pending, setPending] = useState(false);
+    const [pending, setPending] = useState();
     const navigate = useNavigate();
-    const [submitted, setSubmitted] = useState()
 
-    useEffect((e) => {
+    let addTodo = () => {
         console.log('inside useEffect')
         const newTodo = { todo, status };
 
@@ -27,9 +26,9 @@ function Home() {
         }).then(() => {
             console.log('new todo added');
             setPending(false);
-            navigate('/');  
-        })    
-    }, [submitted]);
+            navigate('/home');  
+        })
+    }
 
     return (
         <div>
@@ -43,7 +42,7 @@ function Home() {
                             style={{width:"90%"}}
                             onChange = {(e) => setTodo(e.target.value)}
                         />
-                        <a className="btn-floating waves-effect waves-light black" onClick={ () => setSubmitted(true)}><i className="material-icons">add</i></a>
+                        <a className="btn-floating waves-effect waves-light black" onClick={ addTodo }><i className="material-icons">add</i></a>
                     </div>
                 </div>
             </div>
