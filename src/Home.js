@@ -2,15 +2,16 @@ import React from 'react'
 import TodoList from './TodoList';
 import useFetch from './useFetch';
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useEffect } from 'react';
 
 function Home() {
     const { data:todos, isPending, error } = useFetch('http://localhost:7000/todos');
 
     const [todo, setTodo] = useState('');
-    const status = true;
+    const status = false;
     const [pending, setPending] = useState();
+    const [submitted, setSubmitted] = useState();
     const navigate = useNavigate();
 
     let addTodo = () => {
@@ -26,9 +27,11 @@ function Home() {
         }).then(() => {
             console.log('new todo added');
             setPending(false);
-            navigate('/home');  
+            window.location.reload();
+            setSubmitted(true);  
         })
     }
+
 
     return (
         <div>
@@ -50,7 +53,8 @@ function Home() {
             { isPending && <div> Loading...</div> }
             { todos && <TodoList todos = { todos } />}
         </div>
-  )
+    )
+
 }
 
 export default Home

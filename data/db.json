@@ -6,34 +6,19 @@
       "id": 1
     },
     {
-      "todo": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "status": true,
-      "id": 2
-    },
-    {
-      "todo": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "status": true,
-      "id": 3
-    },
-    {
       "todo": "hello all",
-      "status": true,
+      "status": false,
       "id": 4
     },
     {
       "todo": "hi all",
-      "status": true,
+      "status": false,
       "id": 5
     },
     {
-      "todo": "Hi guys",
-      "status": true,
+      "todo": "Testing",
+      "status": false,
       "id": 6
-    },
-    {
-      "todo": "52525",
-      "status": true,
-      "id": 7
     }
   ]
 }
