@@ -1,24 +1,29 @@
 {
   "todos": [
     {
-      "todo": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "status": true,
-      "id": 1
-    },
-    {
       "todo": "hello all",
       "status": false,
-      "id": 4
+      "id": 2
     },
     {
       "todo": "hi all",
       "status": false,
-      "id": 5
+      "id": 3
     },
     {
       "todo": "Testing",
-      "status": false,
+      "status": true,
+      "id": 4
+    },
+    {
+      "todo": "This is a todo",
+      "status": true,
       "id": 6
+    },
+    {
+      "todo": "test",
+      "status": false,
+      "id": 7
     }
   ]
 }

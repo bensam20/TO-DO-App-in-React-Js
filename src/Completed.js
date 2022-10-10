@@ -1,20 +1,20 @@
 import React from 'react'
 import useFetch from './useFetch';
-import PendingList from './PendingList';
+import CompletedList from './CompletedList';
 
-function Pending() {
+function Completed() {
 
   const { data:todos, isPending, error } = useFetch('http://localhost:7000/todos');
-  const pendingTodos = todos?.filter(todo => todo.status==false);
+  const completedTodos = todos?.filter(todo => todo.status==true);
 
   return (
     <div>
-      <h3 className='center'>Pending...</h3>
+      <h3 className='center'>Completed :)</h3>
       { error && <div>{ error }</div> }
       { isPending && <div> Loading...</div> }
-      { todos && <PendingList todos = { pendingTodos } />}
+      { todos && <CompletedList todos = { completedTodos } />}
     </div>
   )
 }
 
-export default Pending;
+export default Completed;
