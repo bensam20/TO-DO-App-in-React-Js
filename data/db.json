@@ -1,29 +1,9 @@
 {
   "todos": [
     {
-      "todo": "hello all",
+      "todo": "sfdsfdfsfsdf",
       "status": false,
-      "id": 2
-    },
-    {
-      "todo": "hi all",
-      "status": false,
-      "id": 3
-    },
-    {
-      "todo": "Testing",
-      "status": true,
-      "id": 4
-    },
-    {
-      "todo": "This is a todo",
-      "status": true,
-      "id": 6
-    },
-    {
-      "todo": "test",
-      "status": false,
-      "id": 7
+      "id": 11
     }
   ]
 }
